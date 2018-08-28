@@ -22,10 +22,16 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'pages/contact.html',
         controller: 'homeController'
     })
+    .when('/ama', {
+      templateUrl: 'pages/ama.html',
+      controller: 'homeController'
+  })
 });
 
-myApp.controller('homeController', ['$scope', '$http', '$location','$window', function($scope,$http,$location,$window){
+myApp.controller('homeController', ['$scope', '$http', '$location','$window','$rootScope', function($scope,$http,$location,$window,$rootScope){
 
+  $rootScope.$on('$includeContentLoaded', function() {
+ 
     var s = $("#sticker");
     var pos = s.position();
     $(window).on('scroll', function() {
@@ -67,5 +73,32 @@ myApp.controller('homeController', ['$scope', '$http', '$location','$window', fu
       }
     }
   });   
+
+if(location.hash=="#/"){
+  $('html, body').animate({
+    scrollTop: $("#particles-js").offset().top
+}, 500);
+
+}
+ else if(location.hash=="#/services"){
+    $('html, body').animate({
+      scrollTop: $("#services").offset().top
+  }, 500);
+  }else if(location.hash=="#/about"){
+    $('html, body').animate({
+      scrollTop: $("#about").offset().top
+  }, 500);
+  }else if(location.hash=="#/contact"){
+    $('html, body').animate({
+      scrollTop: $("#contact").offset().top
+  }, 500);
+  }
+
+  });
+  
+
+
+
+    
 
    }]);
