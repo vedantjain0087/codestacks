@@ -93,6 +93,11 @@ if(location.hash=="#/"){
       scrollTop: $("#contact").offset().top
   }, 500);
   }
+  else if(location.hash=="#/ama"){
+    $('html, body').animate({
+      scrollTop: $("#team").offset().top
+  }, 500);
+  }
 
   });
   
