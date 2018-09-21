@@ -148,13 +148,14 @@ myApp.controller('homeController', ['$scope', '$http', '$location','$window','$r
     }
   });   
 
-if(location.hash=="#/"){
-  $('html, body').animate({
-    scrollTop: $("#particles-js").offset().top
-}, 500);
+// if(location.hash=="#/"){
+//   $('html, body').animate({
+//     scrollTop: $("#particles-js").offset().top
+// }, 500);
 
-}
- else if(location.hash=="#/services"){
+// }
+//  else 
+ if(location.hash=="#/services"){
     $('html, body').animate({
       scrollTop: $("#services").offset().top
   }, 500);
