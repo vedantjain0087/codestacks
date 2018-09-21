@@ -17,6 +17,9 @@
   color: #FB4010;
   font-weight: bold;
 }
+.particle_content{
+  font-size:25px;
+}
 html, body {
   height: 100%;
 }
