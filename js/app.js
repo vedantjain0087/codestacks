@@ -59,7 +59,6 @@ myApp.controller('compController', ['$scope', '$http', '$location','$window','$r
         url: 'https://codestacks.herokuapp.com/individual',
         method: "POST",
         data: { fullname: form.fullname.$viewValue, email: form.email.$viewValue,address:form.address.$viewValue,contact:form.contact.$viewValue,org:form.org.$viewValue,txn:form.txn.$viewValue}
-       
     })
     .then(function(response) {
       console.log(response);
