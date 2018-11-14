@@ -18,6 +18,10 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'pages/services.html',
         controller: 'homeController'
     })
+    .when('/zeus', {
+      templateUrl: 'pages/zeus.html',
+      controller: 'homeController'
+  })
     .when('/contact', {
         templateUrl: 'pages/contact.html',
         controller: 'homeController'
