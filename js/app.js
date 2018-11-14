@@ -161,20 +161,25 @@ myApp.controller('homeController', ['$scope', '$http', '$location','$window','$r
  if(location.hash=="#/services"){
     $('html, body').animate({
       scrollTop: $("#services").offset().top
-  }, 500);
+  }, 100);
   }else if(location.hash=="#/about"){
     $('html, body').animate({
       scrollTop: $("#about").offset().top
-  }, 500);
-  }else if(location.hash=="#/contact"){
+  }, 100);
+  }else if(location.hash=="#/zeus"){
+    $('html, body').animate({
+      scrollTop: $("#zeus").offset().top
+  }, 100);
+  }
+  else if(location.hash=="#/contact"){
     $('html, body').animate({
       scrollTop: $("#contact").offset().top
-  }, 500);
+  }, 100);
   }
   else if(location.hash=="#/ama"){
     $('html, body').animate({
       scrollTop: $("#team").offset().top
-  }, 500);
+  }, 100);
   }
 
   });
