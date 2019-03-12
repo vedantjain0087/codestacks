@@ -35,6 +35,11 @@ myApp.config(function ($routeProvider) {
     controller: 'compController',
     controllerAs:'ctrl'
 })
+.when('/workshop', {
+  templateUrl: 'pages/workshop.html',
+  controller: 'homeController',
+  controllerAs:'ctrl'
+})
 });
 
 myApp.controller('compController', ['$scope', '$http', '$location','$window','$rootScope', function($scope,$http,$location,$window,$rootScope){
@@ -179,6 +184,11 @@ myApp.controller('homeController', ['$scope', '$http', '$location','$window','$r
   else if(location.hash=="#/ama"){
     $('html, body').animate({
       scrollTop: $("#team").offset().top
+  }, 100);
+  }
+  else if(location.hash=="#/workshop"){
+    $('html, body').animate({
+      scrollTop: $("#workshop").offset().top
   }, 100);
   }
 
